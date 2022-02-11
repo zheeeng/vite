@@ -26,7 +26,7 @@ It will also replace these strings appearing in JavaScript strings and Vue templ
 
 Vite uses [dotenv](https://github.com/motdotla/dotenv) to load additional environment variables from the following files in your [environment directory](/config/#envdir):
 
-```
+```sh
 .env                # loaded in all cases
 .env.local          # loaded in all cases, ignored by git
 .env.[mode]         # only loaded in specified mode
@@ -46,7 +46,7 @@ Loaded env variables are also exposed to your client source code via `import.met
 
 To prevent accidentally leaking env variables to the client, only variables prefixed with `VITE_` are exposed to your Vite-processed code. e.g. the following file:
 
-```
+```sh
 DB_PASSWORD=foobar
 VITE_SOME_KEY=123
 ```
@@ -87,7 +87,7 @@ By default, the dev server (`dev` command) runs in `development` mode and the `b
 
 This means when running `vite build`, it will load the env variables from `.env.production` if there is one:
 
-```
+```sh
 # .env.production
 VITE_APP_TITLE=My App
 ```
@@ -104,7 +104,7 @@ vite build --mode staging
 
 And to get the behavior we want, we need a `.env.staging` file:
 
-```
+```sh
 # .env.staging
 NODE_ENV=production
 VITE_APP_TITLE=My App (staging)

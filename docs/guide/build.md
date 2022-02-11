@@ -6,7 +6,7 @@ When it is time to deploy your app for production, simply run the `vite build` c
 
 The production bundle assumes support for modern JavaScript. By default, Vite targets browsers which support the [native ESM script tag](https://caniuse.com/es6-module) and [native ESM dynamic import](https://caniuse.com/es6-module-dynamic-import). As a reference, Vite uses this [browserslist](https://github.com/browserslist/browserslist) query:
 
-```
+```txt
 defaults and supports es6-module and supports es6-module-dynamic-import, not opera > 0, not samsung > 0, not and_qq > 0
 ```
 
@@ -62,7 +62,7 @@ module.exports = defineConfig({
 
 Suppose you have the following source code structure:
 
-```
+```txt
 ├── package.json
 ├── vite.config.js
 ├── index.html
@@ -131,7 +131,7 @@ module.exports = defineConfig({
 
 Running `vite build` with this config uses a Rollup preset that is oriented towards shipping libraries and produces two bundle formats: `es` and `umd` (configurable via `build.lib`):
 
-```
+```bash
 $ vite build
 building for production...
 [write] my-lib.es.js 0.08kb, brotli: 0.07kb

@@ -1,6 +1,6 @@
 This test aim to check for a particular type of circular dependency that causes tricky deadlocks, **deadlocks with forked imports stack**
 
-```
+```txt
 A -> B means: B is imported by A and B has A in its stack
 A ... B means: A is waiting for B to ssrLoadModule()
 
@@ -12,7 +12,7 @@ H -> A -> B ... X
 
 ### Forked deadlock description:
 
-```
+```txt
 [X] is waiting for [Y] to resolve
  ↑                  ↳ is waiting for [A] to resolve
  │                                    ↳ is waiting for [B] to resolve
@@ -22,23 +22,23 @@ H -> A -> B ... X
 
 This may seems a traditional deadlock, but the thing that makes this special is the import stack of each module:
 
-```
+```txt
 [X] stack:
 	[H]
 ```
 
-```
+```txt
 [Y] stack:
 	[X]
 	[H]
 ```
 
-```
+```txt
 [A] stack:
 	[H]
 ```
 
-```
+```txt
 [B] stack:
 	[A]
 	[H]

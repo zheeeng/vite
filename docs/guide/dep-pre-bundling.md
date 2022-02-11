@@ -2,7 +2,7 @@
 
 When you run `vite` for the first time, you may notice this message:
 
-```
+```txt
 Optimizable dependencies detected:
 react, react-dom
 Pre-bundling them to speed up dev server page load...

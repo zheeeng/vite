@@ -15,13 +15,13 @@ Messages must be matched by the following regex:
 
 Appears under "Features" header, `dev` subheader:
 
-```
+```txt
 feat(dev): add 'comments' option
 ```
 
 Appears under "Bug Fixes" header, `dev` subheader, with a link to issue #28:
 
-```
+```txt
 fix(dev): fix dev error
 
 close #28
@@ -29,7 +29,7 @@ close #28
 
 Appears under "Performance Improvements" header, and under "Breaking Changes" with the breaking change explanation:
 
-```
+```txt
 perf(build): remove 'foo' option
 
 BREAKING CHANGE: The 'foo' option has been removed.
@@ -37,7 +37,7 @@ BREAKING CHANGE: The 'foo' option has been removed.
 
 The following commit and commit `667ecc1` do not appear in the changelog if they are under the same release. If not, the revert commit appears under the "Reverts" header.
 
-```
+```txt
 revert: feat(compiler): add 'comments' option
 
 This reverts commit 667ecc1654a317a13331b17617d973392f415f02.
@@ -47,7 +47,7 @@ This reverts commit 667ecc1654a317a13331b17617d973392f415f02.
 
 A commit message consists of a **header**, **body** and **footer**. The header has a **type**, **scope** and **subject**:
 
-```
+```txt
 <type>(<scope>): <subject>
 <BLANK LINE>
 <body>

@@ -29,7 +29,7 @@ Vite provides built-in support for server-side rendering (SSR). The Vite playgro
 
 A typical SSR application will have the following source file structure:
 
-```
+```txt
 - index.html
 - server.js # main application server
 - src/

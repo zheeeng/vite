@@ -80,7 +80,7 @@ If migrating your codebase to `"isolatedModules": true` is an unsurmountable eff
 
 Vite's default types are for its Node.js API. To shim the environment of client side code in a Vite application, add a `d.ts` declaration file:
 
-```typescript
+```ts
 /// <reference types="vite/client" />
 ```
 
@@ -374,13 +374,13 @@ In real world applications, Rollup often generates "common" chunks - code that i
 
 In the non-optimized scenarios, when async chunk `A` is imported, the browser will have to request and parse `A` before it can figure out that it also needs the common chunk `C`. This results in an extra network roundtrip:
 
-```
+```txt
 Entry ---> A ---> C
 ```
 
 Vite automatically rewrites code-split dynamic import calls with a preload step so that when `A` is requested, `C` is fetched **in parallel**:
 
-```
+```txt
 Entry ---> (A + C)
 ```
 

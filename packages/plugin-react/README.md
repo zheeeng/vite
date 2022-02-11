@@ -102,6 +102,6 @@ app.get('/', async (req, res, next) => {
 
 Otherwise, you'll probably get this error:
 
-```
+```txt
 Uncaught Error: @vitejs/plugin-react can't detect preamble. Something is wrong.
 ```
